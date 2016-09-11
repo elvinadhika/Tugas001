@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1"
+        tools:context="id.sch.smktelkom_mlg.tugas01.xirpl6028.pendaftaranyoga.MainActivity">
+
+        <TextView
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="PENDAFTARAN KELAS YOGA"
+            android:textColor="#ff5858"
+            android:textIsSelectable="true"
+            android:textSize="40px"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="136dp"
+            android:layout_height="142dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textViewNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textColor="#d92f2f"
+            android:textStyle="bold" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ff5858" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="#d92f2f"
+            android:textStyle="bold" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="#ff5858" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewHL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hari Latihan"
+            android:textColor="#d92f2f"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupHL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioButtonSK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="SENIN &amp; KAMIS"
+                android:textColor="#ff5858" />
+
+            <RadioButton
+                android:id="@+id/radioButtonSS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="SELASA &amp; SABTU"
+                android:textColor="#ff5858" />
+
+            <RadioButton
+                android:id="@+id/radioButtonRJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="RABU &amp; JUMAT"
+                android:textColor="#ff5858" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tingkatan Yoga"
+            android:textColor="#d92f2f"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerTY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/TY" />
+
+        <TextView
+            android:id="@+id/textViewJY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:text="Jenis Yoga"
+            android:textColor="#d92f2f"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/Asana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asana Yoga"
+            android:textColor="#ff5858" />
+
+        <CheckBox
+            android:id="@+id/Matsyasana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matsyasana Yoga"
+            android:textColor="#ff5858" />
+
+        <CheckBox
+            android:id="@+id/Padmasana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Padmasana Yoga"
+            android:textColor="#ff5858" />
+
+        <CheckBox
+            android:id="@+id/Hatha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hatha Yoga"
+            android:textColor="#ff5858" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenjang"
+            android:textColor="#d92f2f"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/buttonDaftar"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#ff5858"
+            android:text="DAFTAR"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/Hasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp" />
+
+        <TextView
+            android:id="@+id/Hasil2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="TY">
+        <item>Yama (emosional)</item>
+        <item>Niyama (kedisiplinan)</item>
+        <item>Dharana (konsentrasi)</item>
+        <item>Dhyana (meditasi)</item>
+        <item>Asana (postur)</item>
+    </string-array>
+</resources>
