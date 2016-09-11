@@ -176,6 +176,12 @@
             android:textColor="#d92f2f"
             android:textStyle="bold" />
 
+        <Spinner
+            android:id="@+id/spinnerJJ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/JJ" />
+
 
         <Button
             android:id="@+id/buttonDaftar"

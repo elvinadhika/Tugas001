@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
     EditText etNama, etEmail;
     RadioGroup rgHL;
-    Spinner spTY;
+    Spinner spTY, spJJ;
     CheckBox cb1, cb2, cb3, cb4;
     Button bDaftar;
     TextView tvHasil, tvHasil2;
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         etEmail = (EditText) findViewById(R.id.editTextEmail);
         rgHL = (RadioGroup) findViewById(R.id.radioGroupHL);
         spTY = (Spinner) findViewById(R.id.spinnerTY);
+        spJJ = (Spinner) findViewById(R.id.spinnerJJ);
 
         cb1 = (CheckBox) findViewById(R.id.Asana);
         cb2 = (CheckBox) findViewById(R.id.Matsyasana);

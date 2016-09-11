@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="JJ">
+        <item>Anak-Anak</item>
+        <item>Remaja</item>
+        <item>Dewasa</item>
+        <item>Lansia</item>
+    </string-array>
+</resources>
