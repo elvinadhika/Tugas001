@@ -13,7 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
-    EditText etNama, etEmail;
+    EditText etNama, etEmail, etNT;
     RadioGroup rgHL;
     Spinner spTY, spJJ;
     CheckBox cb1, cb2, cb3, cb4;
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         etNama = (EditText) findViewById(R.id.editTextNama);
         etEmail = (EditText) findViewById(R.id.editTextEmail);
+        etNT = (EditText) findViewById(R.id.editTextNT);
         rgHL = (RadioGroup) findViewById(R.id.radioGroupHL);
         spTY = (Spinner) findViewById(R.id.spinnerTY);
         spJJ = (Spinner) findViewById(R.id.spinnerJJ);
@@ -57,9 +58,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     private void doClick() {
         String nama = etNama.getText().toString();
         String email = etEmail.getText().toString();
+        String NT = etNT.getText().toString();
         String hasil = null;
         String TY = spTY.getSelectedItem().toString();
-        String Hasil2 = "\nTingkatan Yoga          : ";
+        String Hasil2 = "\nJenis Yoga             : ";
 
         int startlen = Hasil2.length();
         if (cb1.isChecked()) Hasil2 += cb1.getText() + ",";
@@ -84,15 +86,23 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         }
 
         if (email.isEmpty()) {
-            etEmail.setError("Tahun Belum Diisi");
-        } else if (email.length() > 2) {
-            etEmail.setError("Format Umur Salah");
+            etEmail.setError("Belum Diisi");
+        } else if (email.length() < 9) {
+            etEmail.setError("Format Email Salah");
         } else {
             etNama.setError(null);
         }
 
-        tvHasil.setText("              PENDAFTARAN ANDA BERHASIL              " + "\nNama               : " + nama + " \nEmail           : " + email +
-                "\nHari Latihan      : " + hasil + "\nTingakatan Yoga        : " + TY + Hasil2);
+        if (NT.isEmpty()) {
+            etNT.setError("Belum Diisi");
+        } else if (NT.length() < 9) {
+            etNT.setError("Format Salah");
+        } else {
+            etNT.setError(null);
+        }
+
+        tvHasil.setText("              PENDAFTARAN ANDA BERHASIL              " + "\nNama                      : " + nama + "\nNo. Telepon           : " + NT + " \nEmail                       : " +
+                email + "\nHari Latihan           : " + hasil + "\nTingakatan Yoga   : " + TY + Hasil2);
     }
 
     @Override

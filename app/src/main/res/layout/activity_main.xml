@@ -58,6 +58,27 @@
         </android.support.design.widget.TextInputLayout>
 
         <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Telepon"
+            android:textColor="#d92f2f"
+            android:textStyle="bold" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextNT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:textColor="#ff5858" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
             android:id="@+id/textViewEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
