@@ -13,8 +13,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
-    EditText etNama, etEmail, etNT;
-    RadioGroup rgHL;
+    EditText etNama, etNT;
+    RadioGroup rgHL, rgJK;
     Spinner spTY, spJJ;
     CheckBox cb1, cb2, cb3, cb4;
     Button bDaftar;
@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         setContentView(R.layout.activity_main);
 
         etNama = (EditText) findViewById(R.id.editTextNama);
-        etEmail = (EditText) findViewById(R.id.editTextEmail);
         etNT = (EditText) findViewById(R.id.editTextNT);
         rgHL = (RadioGroup) findViewById(R.id.radioGroupHL);
+        rgJK = (RadioGroup) findViewById(R.id.radioGroupJK);
         spTY = (Spinner) findViewById(R.id.spinnerTY);
         spJJ = (Spinner) findViewById(R.id.spinnerJJ);
 
@@ -57,9 +57,10 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
     private void doClick() {
         String nama = etNama.getText().toString();
-        String email = etEmail.getText().toString();
         String NT = etNT.getText().toString();
         String hasil = null;
+        String hasill = null;
+        String JJ = spJJ.getSelectedItem().toString();
         String TY = spTY.getSelectedItem().toString();
         String Hasil2 = "\nJenis Yoga             : ";
 
@@ -77,18 +78,16 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             hasil = rb.getText().toString();
         }
 
+        if (rgJK.getCheckedRadioButtonId() != -1) {
+            RadioButton rb = (RadioButton)
+                    findViewById(rgJK.getCheckedRadioButtonId());
+            hasill = rb.getText().toString();
+        }
+
         if (nama.isEmpty()) {
             etNama.setError("Nama Belum Diisi");
         } else if (nama.length() < 3) {
             etNama.setError("Nama Minimal 3 Karakter");
-        } else {
-            etNama.setError(null);
-        }
-
-        if (email.isEmpty()) {
-            etEmail.setError("Belum Diisi");
-        } else if (email.length() < 9) {
-            etEmail.setError("Format Email Salah");
         } else {
             etNama.setError(null);
         }
@@ -101,8 +100,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
             etNT.setError(null);
         }
 
-        tvHasil.setText("              PENDAFTARAN ANDA BERHASIL              " + "\nNama                      : " + nama + "\nNo. Telepon           : " + NT + " \nEmail                       : " +
-                email + "\nHari Latihan           : " + hasil + "\nTingakatan Yoga   : " + TY + Hasil2);
+        tvHasil.setText("              PENDAFTARAN ANDA BERHASIL              " + "\nNama                      : " + nama + "\nNo. Telepon           : " + NT
+                + "\nHari Latihan           : " + hasil + "\nTingakatan Yoga   : " + TY + "\nJenjang                  :" + JJ + "\nJenis Kelamin       :" + hasill + Hasil2);
     }
 
     @Override
